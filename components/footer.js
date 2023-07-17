@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 w-full bg-[#FAFAFAFA] border-t py-24">
+    <div className="bottom-0 w-full bg-[#FAFAFAFA] border-t py-24">
       <div className="flex flex-col items-center space-y-10">
         <h1 className="text-4xl font-extrabold">
           Statically Generated with Next.js.
