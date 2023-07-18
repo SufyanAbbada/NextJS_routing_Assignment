@@ -16,9 +16,11 @@ export default function Home() {
         title="Dynamic Routing and Static Generation"
         date="March 16, 2020"
         text="Consectetur mollit id est deserunt exercitation
+        dolore deserunt mollit ex. Cupidatat dolor commodo ipsum incididunt cillum cillum voluptate ullamco sint in ut sunt velit. Consectetur mollit id est deserunt exercitation
         dolore deserunt mollit ex. Cupidatat dolor commodo ipsum incididunt cillum cillum voluptate ullamco sint in ut sunt velit."
-        userImage="/cover1.jpg"
+        userImage="/jj.jpeg"
         userName="JJ Kasper"
+        spaces={true}
       />
       <Header heading="More Stories" />
       <p></p>
