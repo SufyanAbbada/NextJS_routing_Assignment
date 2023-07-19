@@ -5,7 +5,7 @@ import jj from "@/public/jj.jpeg";
 
 const ShowPost = (props) => {
   return (
-    <>
+    <div className="pb-20">
       <Link href={props.route} className="mb-5">
         <Image
           src={props.image}
@@ -23,7 +23,7 @@ const ShowPost = (props) => {
         </div>
         <div className="w-1/2">
           <p>{props.text}</p>
-          <div className="flex items-center mt-3">
+          <div className="flex items-center mt-5">
             <Image
               src={props.userImage}
               alt="User Image"
@@ -35,7 +35,7 @@ const ShowPost = (props) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

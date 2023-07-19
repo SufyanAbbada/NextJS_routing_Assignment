@@ -6,8 +6,7 @@ export default function Home() {
     <div className="m-16">
       <Header
         heading="Blog."
-        helpingText="A statically generated blog example using Next.js and Markdown.
-"
+        helpingText="A statically generated blog example using Next.js and Markdown."
       />
       <ShowPost
         image="/cover0.jpg"
