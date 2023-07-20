@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import jj from "@/public/jj.jpeg";
 
 const ShowPost = (props) => {
   return (
@@ -40,3 +39,7 @@ const ShowPost = (props) => {
 };
 
 export default ShowPost;
+
+const getData = () => {
+  
+}
