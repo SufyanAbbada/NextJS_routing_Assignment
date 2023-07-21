@@ -13,7 +13,7 @@ export default function Home() {
         width={100}
         route="/dynamic-routing"
         title="Dynamic Routing and Static Generation"
-        date="March 16, 2020"
+        date="2020-03-16"
         text="Consectetur mollit id est deserunt exercitation
         dolore deserunt mollit ex. Cupidatat dolor commodo ipsum incididunt cillum cillum voluptate ullamco sint in ut sunt velit. Consectetur mollit id est deserunt exercitation
         dolore deserunt mollit ex. Cupidatat dolor commodo ipsum incididunt cillum cillum voluptate ullamco sint in ut sunt velit."
