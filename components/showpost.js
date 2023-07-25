@@ -12,15 +12,21 @@ const ShowPost = (props) => {
           width={0}
           height={0}
           sizes="100vw"
-          style={props.width === 100 ? { width: "100%", height: "auto" } : {}}
+          style={
+            props.width === 100
+              ? { width: "100%", height: "auto" }
+              : { width: "100%", height: "10rem", objectFit: "fill" }
+          }
         />
       </Link>
-      <div className={`flex ${props.spaces ? `mt-16` : ``}`}>
-        <div className="w-1/2">
-          <h2 className="text-4xl mb-5">{props.title}</h2>
-          <h4>{props.date}</h4>
+      <div className={`${props.spaces ? `flex mt-16` : `mt-8`}`}>
+        <div className={`${props.spaces ? `w-1/2` : ``}`}>
+          <h2 className={`mb-5 ${props.spaces ? `text-4xl` : `text-3xl`}`}>
+            {props.title}
+          </h2>
+          <h4 className={props.spaces ? "" : "mb-6"}>{props.date}</h4>
         </div>
-        <div className="w-1/2">
+        <div className={props.spaces ? "w-1/2" : ""}>
           <p>{props.text}</p>
           <div className="flex items-center mt-5">
             <Image
@@ -28,7 +34,7 @@ const ShowPost = (props) => {
               alt="User Image"
               width={500}
               height={500}
-              className="w-12 h-12 mr-4"
+              className="w-12 h-12 mr-4 rounded-full"
             />
             <h3 className="text-xl font-bold">{props.userName}</h3>
           </div>
@@ -39,7 +45,3 @@ const ShowPost = (props) => {
 };
 
 export default ShowPost;
-
-const getData = () => {
-  
-}

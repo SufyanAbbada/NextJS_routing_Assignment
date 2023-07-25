@@ -1,5 +1,5 @@
-import { Button } from "@mui/material";
 import React from "react";
+import { Button } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -10,7 +10,9 @@ const Footer = () => {
         </h1>
         <span className="border border-black">
           <Button className="font-bold bg-black text-lg text-white hover:bg-white hover:text-black px-10 py-3">
-            Read Documentation
+            <a href="https://nextjs.org/docs/basic-features/pages">
+              Read Documentation
+            </a>
           </Button>
         </span>
         <a

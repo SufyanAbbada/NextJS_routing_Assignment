@@ -1,10 +1,12 @@
+import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
 import { cloudinaryUploader } from "@/lib/cloudinaryUploader";
-import prisma from "@/lib/prisma";
 
 export async function GET(request, { params }) {
-  console.log(params);
-  return NextResponse.json({ res: params });
+  const postData = await prisma.post.findMany({
+    where: { route: params["post-type"] },
+  });
+  return NextResponse.json({ singlePage: postData });
 }
 
 export async function POST(request) {
@@ -14,19 +16,23 @@ export async function POST(request) {
   const date = new Date();
   const isoDate = date.toISOString();
 
-  const result = await prisma.post.create({
-    data: {
-      date: isoDate,
-      title: body.title,
-      image: image.secure_url,
-      width: body.width,
-      route: body.route,
-      text: body.text,
-      userImage: userImage.secure_url,
-      userName: body.userName,
-      spaces: body.spaces,
-    },
-  });
-  console.log(result);
+  try {
+    const result = await prisma.post.create({
+      data: {
+        date: isoDate,
+        title: body.title,
+        image: image.secure_url,
+        width: body.width,
+        route: body.route,
+        text: body.text,
+        userImage: userImage.secure_url,
+        userName: body.userName,
+        spaces: body.spaces,
+      },
+    });
+  } catch (err) {
+    const result = err.message;
+  }
+
   return NextResponse.json({ res: result });
 }
