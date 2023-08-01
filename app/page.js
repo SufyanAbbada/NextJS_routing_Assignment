@@ -3,8 +3,8 @@ import Header from "./heading";
 import dateFormat from "dateformat";
 
 export default async function Home() {
-  const { allPosts } = await getData();
-  const [dynamicRouting, preview, helloWorld] = allPosts;
+  // const { allPosts } = await getData();
+  // const [dynamicRouting, preview, helloWorld] = allPosts;
 
   return (
     <div className="m-16">
@@ -47,12 +47,12 @@ export default async function Home() {
   );
 }
 
-export const getData = async () => {
-  const frontPagePosts = await fetch(
-    `${process.env.DEVELOPMENT_URL}/api/posts`,
-    {
-      cache: "no-store",
-    }
-  );
-  return frontPagePosts.json();
-};
+// export const getData = async () => {
+//   const frontPagePosts = await fetch(
+//     `${process.env.DEVELOPMENT_URL}/api/posts`,
+//     {
+//       cache: "no-store",
+//     }
+//   );
+//   return frontPagePosts.json();
+// };
