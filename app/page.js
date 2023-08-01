@@ -49,7 +49,7 @@ export default async function Home() {
 
 export const getData = async () => {
   const frontPagePosts = await fetch(
-    `http://${process.env.DEVELOPMENT_URL}/api/posts`,
+    `${process.env.DEVELOPMENT_URL}/api/posts`,
     {
       cache: "no-store",
     }

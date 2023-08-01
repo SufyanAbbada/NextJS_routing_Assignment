@@ -64,7 +64,7 @@ export default Post;
 
 export const getData = async (path) => {
   const pageData = await fetch(
-    `http://${process.env.DEVELOPMENT_URL}/api/posts/${path}`,
+    `${process.env.DEVELOPMENT_URL}/api/posts/${path}`,
     {
       cache: "no-store",
     }
