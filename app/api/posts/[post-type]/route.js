@@ -15,6 +15,7 @@ export async function POST(request) {
   const userImage = await cloudinaryUploader(body.userImage);
   const date = new Date();
   const isoDate = date.toISOString();
+  let result;
 
   try {
     const result = await prisma.post.create({
