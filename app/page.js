@@ -48,8 +48,11 @@ export default async function Home() {
 }
 
 export const getData = async () => {
-  const frontPagePosts = await fetch("http://localhost:3000/api/posts", {
-    cache: "no-store",
-  });
+  const frontPagePosts = await fetch(
+    `http://${process.env.DEVELOPMENT_URL}/api/posts`,
+    {
+      cache: "no-store",
+    }
+  );
   return frontPagePosts.json();
 };

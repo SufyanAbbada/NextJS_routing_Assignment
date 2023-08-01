@@ -63,8 +63,11 @@ async function Post({ params }) {
 export default Post;
 
 export const getData = async (path) => {
-  const pageData = await fetch(`http://localhost:3000/api/posts/${path}`, {
-    cache: "no-store",
-  });
+  const pageData = await fetch(
+    `http://${process.env.DEVELOPMENT_URL}/api/posts/${path}`,
+    {
+      cache: "no-store",
+    }
+  );
   return pageData.json();
 };
