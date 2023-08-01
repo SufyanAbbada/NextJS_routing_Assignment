@@ -12,7 +12,7 @@ export default async function Home() {
         heading="Blog."
         helpingText="A statically generated blog example using Next.js and Markdown."
       />
-      <ShowPost
+      {/* <ShowPost
         image={dynamicRouting.image}
         width={dynamicRouting.width}
         route={"/posts/" + dynamicRouting.route}
@@ -22,10 +22,10 @@ export default async function Home() {
         userImage={dynamicRouting.userImage}
         userName={dynamicRouting.userName}
         spaces={dynamicRouting.spaces}
-      />
+      /> */}
 
       <Header heading="More Stories" />
-      <div className="flex gap-16">
+      {/* <div className="flex gap-16">
         {[helloWorld, preview].map((post, key) => {
           return (
             <ShowPost
@@ -42,7 +42,7 @@ export default async function Home() {
             />
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
