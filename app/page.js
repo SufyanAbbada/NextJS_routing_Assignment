@@ -3,8 +3,8 @@ import Header from "./heading";
 import dateFormat from "dateformat";
 
 export default async function Home() {
-  const { allPosts } = await getData();
-  const [dynamicRouting, preview, helloWorld] = allPosts;
+  // const { allPosts } = await getData();
+  // const preview = allPosts[0];
 
   return (
     <div className="m-16">
@@ -12,20 +12,20 @@ export default async function Home() {
         heading="Blog."
         helpingText="A statically generated blog example using Next.js and Markdown."
       />
-      <ShowPost
-        image={dynamicRouting.image}
-        width={dynamicRouting.width}
-        route={"/posts/" + dynamicRouting.route}
-        title={dynamicRouting.title}
-        date={dateFormat(dynamicRouting.date, "mmmm dS, yyyy")}
-        text={dynamicRouting.text}
-        userImage={dynamicRouting.userImage}
-        userName={dynamicRouting.userName}
-        spaces={dynamicRouting.spaces}
-      />
+      {/* <ShowPost
+        image={preview.image}
+        width={preview.width}
+        route={"/posts/" + preview.route}
+        title={preview.title}
+        date={dateFormat(preview.date, "mmmm dS, yyyy")}
+        text={preview.text}
+        userImage={preview.userImage}
+        userName={preview.userName}
+        spaces={preview.spaces}
+      /> */}
 
       <Header heading="More Stories" />
-      <div className="flex gap-16">
+      {/* <div className="flex gap-16">
         {[helloWorld, preview].map((post, key) => {
           return (
             <ShowPost
@@ -42,17 +42,17 @@ export default async function Home() {
             />
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
 
-export const getData = async () => {
-  const frontPagePosts = await fetch(
-    `${process.env.DEVELOPMENT_URL}/api/posts`,
-    {
-      cache: "no-store",
-    }
-  );
-  return frontPagePosts.json();
-};
+// export const getData = async () => {
+//   const frontPagePosts = await fetch(
+//     `${process.env.DEVELOPMENT_URL}/api/posts`,
+//     {
+//       cache: "no-store",
+//     }
+//   );
+//   return frontPagePosts.json();
+// };
